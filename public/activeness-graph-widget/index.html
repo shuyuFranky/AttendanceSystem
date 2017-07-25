@@ -7,6 +7,7 @@
         var code = '<iframe src="http://localhost:3000/graph/coding" frameborder="0" scrolling="no" width="1200"></iframe>';
         code = code.replace('http://localhost:3000/', window.location);
         $('#usage-code').text(code);
+        $('body').append(code);
     });
     </script>
 </head>

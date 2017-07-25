@@ -48,7 +48,8 @@ func internalError(res http.ResponseWriter, req *http.Request) {
 }
 
 func fetchActivenessData(globalKey string, writer http.ResponseWriter) error {
-    res, err := http.Get("https://coding.net/api/user/activeness/data/" + globalKey)
+    //res, err := http.Get("https://coding.net/api/user/activeness/data/" + globalKey)
+    res, err := http.Get("http://localhost:3010/users/data")
     if err != nil {
         return err
     }
