@@ -9,8 +9,8 @@ router.get('/', function(req, res, next) {
 });
 
 /* GET main page. */
-router.get('/main', function(req, res, next) {
-  res.render('main', {});
+router.get('/persion', function(req, res, next) {
+  res.render('persion', {});
 });
 
 /* GET data page. */
