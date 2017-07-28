@@ -27,6 +27,25 @@
     <!-- 引入 echarts.js -->
     <script src="/js/echarts.js"></script>
 
+    <script type="text/javascript" src="/js/jquery.js" ></script>
+    <script type="text/javascript" src="/js/github_contribution.js"></script>
+    <link href="/css/github_contribution_graph.css" media="all" rel="stylesheet" />
+
+    <script type="text/javascript">
+    //Generate random number between min and max
+    
+    $(document).ready(function(){
+    
+        var data = [{"date":"2017-07-24","count":0},{"date":"2017-07-25","count":2},{"date":"2017-07-26","count":3},{"date":"2017-07-27","count":0},{"date":"2017-07-28","count":0},{"date":"2017-07-29","count":0},{"date":"2017-07-30","count":0},{"date":"2017-07-31","count":0},{"date":"2017-08-01","count":0},{"date":"2017-08-02","count":0},{"date":"2017-08-03","count":5},{"date":"2017-08-04","count":2},{"date":"2017-08-05","count":0},{"date":"2017-08-06","count":0},{"date":"2017-08-07","count":0},{"date":"2017-08-08","count":10},{"date":"2017-08-09","count":1},{"date":"2017-08-10","count":2},{"date":"2017-08-11","count":3},{"date":"2017-08-12","count":3},{"date":"2017-08-13","count":0}];
+        
+        $('#gitgraph').github_graph( {
+            data: data,
+            texts: ['completed task','completed tasks']
+        });
+        
+    });
+  </script>
+
 </head>
 
 <body>
@@ -109,7 +128,7 @@
             </div>
 
             <div class="col-lg-9" id="gitgraph">
-                <iframe src="http://localhost:3000/graph/coding" frameborder="0" scrolling="no" width="1200"></iframe>
+                <!-- <iframe src="http://localhost:3000/graph/coding" frameborder="0" scrolling="no" width="1200"></iframe> -->
             </div>
             
             <!-- <div class="col-sm-3 col-xs-6">
@@ -143,7 +162,7 @@
     <!-- /.container -->
 
     <!-- jQuery -->
-    <script src="/js/jquery.js"></script>
+    <!-- <script src="/js/jquery.js"></script> -->
 
     <!-- Bootstrap Core JavaScript -->
     <script src="/js/bootstrap.min.js"></script>
