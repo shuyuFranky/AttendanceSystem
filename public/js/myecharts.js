@@ -75,7 +75,7 @@
             {
                 top: 300,
                 left: 'center',
-                range: ['2017-07-01', '2017-12-31'],
+                range: ['2017-07-01', '2017-12-30'],
                 splitLine: {
                     show: true,
                     lineStyle: {
