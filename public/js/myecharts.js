@@ -139,7 +139,6 @@
                         return b[1] - a[1];
                     }).slice(0, 10),
                     symbolSize: function (val) {
-                        // return val[1] / 500;
                         return val[1] * 2;
                     },
                     showEffectOn: 'render',
@@ -164,7 +163,6 @@
                         return b[1] - a[1];
                     }).slice(0, 10),
                     symbolSize: function (val) {
-                        // return val[1] / 500;
                         return val[1] * 2;
                     },
                     showEffectOn: 'render',
