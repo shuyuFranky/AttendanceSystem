@@ -1,6 +1,6 @@
 // <script type="text/javascript">
         // // 基于准备好的dom，初始化echarts实例
-        var myChart = echarts.init(document.getElementById('main'));
+        var myChart = echarts.init(document.getElementById('echart'));
 
         function getVirtulData(year) {
             year = year || '2017';
@@ -49,7 +49,7 @@
             calendar: [{
                 top: 100,
                 left: 'center',
-                range: ['2017-01-01', '2017-06-30'],
+                range: ['2017-01-01', '2017-6-30'],
                 splitLine: {
                     show: true,
                     lineStyle: {
@@ -71,8 +71,9 @@
                         borderColor: '#111'
                     }
                 }
-            }, {
-                top: 340,
+            },
+            {
+                top: 300,
                 left: 'center',
                 range: ['2017-07-01', '2017-12-31'],
                 splitLine: {
