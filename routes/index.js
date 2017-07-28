@@ -14,8 +14,7 @@ router.get('/index', function(req, res, next) {
 
 /** GET for test */
 router.get('/test', function(req, res, next) {
-  var data = require('../public/data/newData');
-  res.render('test', { data: data.daily_activeness });
+  res.render('test');
 })
 
 module.exports = router;
