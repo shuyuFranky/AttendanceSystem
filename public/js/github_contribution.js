@@ -1,4 +1,3 @@
-//Author: bachvtuan@gmail.com
 
 //Format string
 if (!String.prototype.formatString) {
@@ -46,7 +45,7 @@ if (!String.prototype.formatString) {
         var processListTimeStamp = function(list_timestamp){
           obj_timestamp = {}; 
           for (var i=0; i < list_timestamp.length; i++){
-            obj_timestamp[list_timestamp[i].date] = parseInt(list_timestamp[i].count);
+            obj_timestamp[list_timestamp[i].date] = parseFloat(list_timestamp[i].hours);
           }
         }
 
@@ -56,9 +55,31 @@ if (!String.prototype.formatString) {
           return "{0}-{1}-{2}".formatString( date_obj.getFullYear(), pretty_month , pretty_date  );
         }
 
+        var getHours = function( display_date ) {
+          if ( obj_timestamp[ display_date ]) {
+            return obj_timestamp[ display_date ];
+          }
+          return 0;
+        }
+
+        // hours to count map
+        var mymap = function( hours ) {
+          hours = parseFloat(hours);
+          if (hours >= 10)
+            return 4;
+          else if (hours >= 8)
+            return 3;
+          else if (hours >= 6)
+            return 2;
+          else if (hours > 0)
+            return 1;
+          else
+            return 0; 
+        }
+
         var getCount = function( display_date ){
           if ( obj_timestamp[ display_date ] ){
-            return obj_timestamp[ display_date];
+            return mymap(obj_timestamp[ display_date ]);
           }
           return 0;
         }
@@ -123,10 +144,11 @@ if (!String.prototype.formatString) {
               }
               //move on to next day
               start_date.setDate( start_date.getDate() + 1 );
+              var hours = getHours( data_date );
               var count = getCount( data_date );
               var color = getColor( count );
 
-              item_html += '<rect class="day" width="11" height="11" y="'+ y +'" fill="'+ color + '" data-count="'+ count +'" data-date="'+ data_date +'"/>';
+              item_html += '<rect class="day" width="11" height="11" y="'+ y +'" fill="'+ color + '" data-count="'+ hours +'" data-date="'+ data_date +'"/>';
             }
 
             item_html += "</g>";
@@ -212,7 +234,7 @@ if (!String.prototype.formatString) {
             return d.getFullYear();
           } ,
           //Default init settings.colors, user can override
-          colors: ['#eeeeee','#d6e685','#8cc665','#44a340','#44a340'],
+          colors: ['#eeeeee','#d6e685','#8cc665','#44a340','#006400'],
           //List of name months
           month_names: ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
           h_days : ['M','W','F'],

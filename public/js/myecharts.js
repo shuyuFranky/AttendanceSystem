@@ -1,6 +1,11 @@
-// <script type="text/javascript">
+    $.fn.echarts_graph = function( indata ) {
+
+        var _this = $(this);
         // // 基于准备好的dom，初始化echarts实例
         var myChart = echarts.init(document.getElementById('echart'));
+
+        //var myChart = indata.myChart;
+        var rawdata = indata.rawdata;
 
         function getVirtulData(year) {
             year = year || '2017';
@@ -17,7 +22,16 @@
             return data;
         }
 
-        var data = getVirtulData(2017);
+        function preprocessingData(indata) {
+            var newdata = [];
+            for (var i=0; i<indata.length; i++) {
+                newdata.push([indata[i]['date'], indata[i]['hours']]);
+            }
+            return newdata;
+        }
+
+        //var data = getVirtulData(2017);
+        var data = preprocessingData(rawdata);
 
         option = {
             backgroundColor: '#404a59',
@@ -184,4 +198,6 @@
 
         myChart.setOption(option);
 
-//    </script>
+        return this;
+};
+ 
