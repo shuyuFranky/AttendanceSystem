@@ -234,7 +234,7 @@ if (!String.prototype.formatString) {
             return d.getFullYear();
           } ,
           //Default init settings.colors, user can override
-          colors: ['#eeeeee','#d6e685','#8cc665','#44a340','#006400'],
+          colors: ['#eee','#c6e48b','#7bc96f','#239a3b','#196127'],
           //List of name months
           month_names: ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
           h_days : ['M','W','F'],

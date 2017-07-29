@@ -114,10 +114,22 @@
                 <h3 class="page-header">Related Projects</h3>
             </div>
 
-            <div class="col-lg-9" id="gitgraph">
+            <div class="col-lg-8" id="graphbox">
+            <div class="col-lg-8" id="gitgraph">
                 <!-- <iframe src="http://localhost:3000/graph/coding" frameborder="0" scrolling="no" width="1200"></iframe> -->
             </div>
-            
+            <div class="contrib-legend text-gray col-lg-8" id="legend_git" title="A summary of pull requests, issues opened, and commits to the default and gh-pages branches.">
+                Less
+                <ul class="legend">
+                    <li style="background-color: #eee"></li>
+                    <li style="background-color: #c6e48b"></li>
+                    <li style="background-color: #7bc96f"></li>
+                    <li style="background-color: #239a3b"></li>
+                    <li style="background-color: #196127"></li>
+                </ul>
+                More
+            </div>
+            </div>
             <!-- <div class="col-sm-3 col-xs-6">
                 <a href="#">
                     <img class="img-responsive portfolio-item" src="http://placehold.it/500x300" alt="">
@@ -194,7 +206,12 @@
             //var myChart = echarts.init(document.getElementById('echart'));
             $('#echart').echarts_graph( {
                 rawdata: rawdata
-             });
+            });
+
+            var 
+                contrib_legend = $('#legend_git'),
+                gitgraph = $('#gitpraph');
+            gitgraph.append(contrib_legend);
         
         });
     </script>
