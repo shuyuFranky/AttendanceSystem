@@ -26,11 +26,19 @@ footer {
 
 #echart {
     border:1px solid #000;
-    height:500px; 
+    height:500px;
+}
+
+#info {
+    padding: 0 5%;
+}
+
+#persionimg {
+    padding: 0 5%;
 }
 
 .contrib-legend {
-    float: right;
+    float: left;
     margin: 2%;
 }
 
@@ -46,7 +54,7 @@ footer {
     list-style: none;
 }
 
-/* ul, menu, dir {
+ /* ul {
     display: block;
     list-style-type: disc;
     -webkit-margin-before: 1em;
@@ -54,13 +62,19 @@ footer {
     -webkit-margin-start: 0px;
     -webkit-margin-end: 0px;
     -webkit-padding-start: 40px;
-} */
+}  */
 
 .contrib-legend .legend li {
     display: inline-block;
     width: 10px;
     height: 10px;
 }
+
+ ul, ol {
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+} 
 
 /* li {
     display: list-item;
