@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Portfolio Item - Start Bootstrap Template</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="/css/portfolio-item.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- 引入 echarts.js -->
+    <script src="/js/echarts.js"></script>
+
+    <script type="text/javascript" src="/js/jquery.js" ></script>
+    <script type="text/javascript" src="/js/github_contribution.js"></script>
+    <link href="/css/github_contribution_graph.css" media="all" rel="stylesheet" />
+
+    <script src="/js/myecharts.js"></script>  
+
+    <style>
+        #customers {
+            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+        
+        #customers td, #customers th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        
+        #customers tr:nth-child(even){background-color: #f2f2f2;}
+        
+        #customers tr:hover {background-color: #ddd;}
+        
+        #customers th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <% include include/nav.ejs %>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Portfolio Item Heading -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">一周数据可视化
+                    <small>每天不同语言代码量</small>
+                </h1>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Portfolio Item Row -->
+        <div class="row">
+
+            <!-- <div class="col-md-8">
+                <img class="img-responsive" src="http://placehold.it/750x500" alt="">
+            </div> -->
+
+            <div class="col-md-8" id="echart">
+                
+            </div>
+            
+
+            <div class="col-md-4" id="info">
+                <h3>每天不同语言代码量</h3>
+                <p>收集数据内容：一周以来每天写或修改不同编程语言行数。</p>
+                <p>可视化数据表如下表所示，每天统计前一天0:00 - 24:00时间段写或修改的不同编程语言行数。</p>
+                <h3>一周总体统计</h3>
+                <ul>
+                    <li><span>HTML : </span><span>323</span></li>
+                    <li><span>JavaScript : </span><span>427</span></li>
+                    <li><span>C++ : </span><span>823</span></li>
+                    <li><span>Shell : </span><span>1189</span></li>
+                    <li><span>Python : </span><span>3758</span></li>
+                </ul>
+            </div>
+
+        </div>
+        <!-- /.row -->
+
+        <!-- Related Projects Row -->
+        <div class="row">
+
+            <div class="col-lg-12">
+                <h3 class="page-header">Projects Data</h3>
+            </div>
+
+            <div class="col-lg-8" id="graphbox">
+                <table id="customers">
+                    <tr>
+                        <th>语言</th>
+                        <th>周一</th>
+                        <th>周二</th> 
+                        <th>周三</th>
+                        <th>周四</th>
+                        <th>周五</th>
+                        <th>周六</th>
+                        <th>周日</th> 
+                    </tr>
+                    <tr>
+                        <td>HTML</td>
+                        <td>18</td>
+                        <td>0</td>
+                        <td>40</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>30</td>
+                        <td>235</td>
+                    </tr>
+                    <tr>
+                        <td>JavaScript</td>
+                        <td>22</td>
+                        <td>55</td>
+                        <td>170</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>180</td>
+                    </tr>
+                    <tr>
+                        <td>C++</td>
+                        <td>112</td>
+                        <td>99</td>
+                        <td>325</td>
+                        <td>108</td>
+                        <td>0</td>
+                        <td>80</td>
+                        <td>99</td>
+                    </tr>
+                    <tr>
+                        <td>Shell</td>
+                        <td>143</td>
+                        <td>165</td>
+                        <td>117</td>
+                        <td>178</td>
+                        <td>120</td>
+                        <td>299</td>
+                        <td>167</td>
+                    </tr>
+                    <tr>
+                        <td>Python</td>
+                        <td>1208</td>
+                        <td>150</td>
+                        <td>450</td>
+                        <td>220</td>
+                        <td>0</td>
+                        <td>1400</td>
+                        <td>330</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-sm-3 col-xs-6" id="persionimg">
+                <a href="#">
+                    <img class="img-responsive portfolio-item" src="/images/p1.png" alt="">
+                </a>
+            </div>
+
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Footer -->
+        <%include include/footer.ejs %>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <!-- <script src="/js/jquery.js"></script> -->
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/js/bootstrap.min.js"></script>
+    <!-- <script src="/js/myecharts.js"></script>  -->
+    <script type="text/javascript">
+        var myChart = echarts.init(document.getElementById('echart'));
+        
+        myChart.title = '堆叠条形图';
+    
+        option = {
+            tooltip : {
+                trigger: 'axis',
+                axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+                    type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+                }
+            },
+            legend: {
+                data: ['HTML', 'JavaScript', 'C++', 'Shell', 'Python']
+            },
+            grid: {
+                left: '3%',
+                right: '4%',
+                bottom: '3%',
+                containLabel: true
+            },
+            xAxis:  {
+                type: 'value'
+            },
+            yAxis: {
+                type: 'category',
+                data: ['周一','周二','周三','周四','周五','周六','周日']
+            },
+            series: [
+                {
+                    name: 'HTML',
+                    type: 'bar',
+                    stack: '总量',
+                    label: {
+                        normal: {
+                            show: true,
+                            position: 'insideRight'
+                        }
+                    },
+                    data: [18, 0, 40, 0, 0, 30, 235]
+                },
+                {
+                    name: 'JavaScript',
+                    type: 'bar',
+                    stack: '总量',
+                    label: {
+                        normal: {
+                            show: true,
+                            position: 'insideRight'
+                        }
+                    },
+                    data: [22, 55, 170, 0, 0, 0, 180]
+                },
+                {
+                    name: 'C++',
+                    type: 'bar',
+                    stack: '总量',
+                    label: {
+                        normal: {
+                            show: true,
+                            position: 'insideRight'
+                        }
+                    },
+                    data: [112, 99, 325, 108, 0, 80, 99]
+                },
+                {
+                    name: 'Shell',
+                    type: 'bar',
+                    stack: '总量',
+                    label: {
+                        normal: {
+                            show: true,
+                            position: 'insideRight'
+                        }
+                    },
+                    data: [143, 165, 117, 178, 120, 299, 167]
+                },
+                {
+                    name: 'Python',
+                    type: 'bar',
+                    stack: '总量',
+                    label: {
+                        normal: {
+                            show: true,
+                            position: 'insideRight'
+                        }
+                    },
+                    data: [1208, 150, 450, 220, 0, 1400, 330]
+                }
+            ]
+        };
+        
+        myChart.setOption(option);
+    </script>
+
+</body>
+
+</html>

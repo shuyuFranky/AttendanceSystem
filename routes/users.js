@@ -15,6 +15,12 @@ router.get('/persionPage', function(req, res, next) {
   //res.render('persionpage', {rawdata: data });
 });
 
+/** GET persional page, both two ways above. */
+router.get('/hw1', function(req, res, next) {
+  res.render('hw1', {});
+  //res.render('persionpage', {rawdata: data });
+});
+
 function getVirtulData(year) {
   year = year || '2017';
 

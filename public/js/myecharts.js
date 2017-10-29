@@ -195,7 +195,6 @@
                 }
             ]   
         };
-
         myChart.setOption(option);
 
         return this;
